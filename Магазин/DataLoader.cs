@@ -15,20 +15,26 @@ namespace Магазин
             {
                 return new List<Spicok>
                 {
-                    new Spicok { Name = "Pogow из сердца", Price = 625, Foto = "/Photo/Родом из сердца.jpg" },
-                    new Spicok { Name = "Страшный дом", Price = 689, Foto = "/Photo/Странный дом.jpg" },
-                    new Spicok { Name = "За спиной", Price = 759, Foto = "/Photo/За спиной.jpg" },
-                    new Spicok { Name = "Атомные приемки", Price = 899, Foto = "/Photo/Атомные привычки.jpg" },
-                    new Spicok { Name = "Газдировки менеджера", Price = 1118, Foto = "/Photo/Татуировки менеджера.jpg" },
-                    new Spicok { Name = "Пять языков любви", Price = 487, Foto = "/Photo/Пять языков любви.jpg" },
-                    new Spicok { Name = "Игры королей", Price = 781, Foto = "/Photo/Игры королей.jpg" },
-                    new Spicok { Name = "Записи много врача", Price = 541, Foto = "/Photo/Записи юного врача.jpg" },
-                    new Spicok { Name = "Бесцедливый", Price = 428, Foto = "/Photo/Еженедельник.jpg" },
-                    new Spicok { Name = "Двадцать шестой", Price = 587, Foto = "/Photo/Двадцать шестой.jpg" },
-                    new Spicok { Name = "Двоющую море", Price = 777, Foto = "/Photo/Донецкое море.jpg" },
-                    new Spicok { Name = "Пластиковый океан", Price = 1195, Foto = "/Photo/Пластиковый океан.jpg" },
-                    new Spicok { Name = "Клиника в Гоблинском переулке", Price = 585, Foto = "/Photo/Клиника в Гоблинском переулке.jpg" },
-                    new Spicok { Name = "Семнадцатый", Price = 1655, Foto = "/Photo/Семнадцатый.jpg" }
+                    new Spicok { Name = "Робот РУ Mobicaro Собака", Price = 1990, Foto = "/Photo/собака.jpg" },
+                    new Spicok { Name = "Конструктор LEGO DUPLO ", Price = 3071, Foto = "/Photo/пазл.jpg" },
+                    new Spicok { Name = "Подъемный кран РУ Mobicaro", Price = 3499, Foto = "/Photo/кран.jpg" },
+                    new Spicok { Name = "Бластер Zuru XSHOT", Price = 3400, Foto = "/Photo/бластер.jpg" },
+                    new Spicok { Name = "Игровой набор Hot Wheels", Price = 2222, Foto = "/Photo/хотфилс.jpg" },
+                    new Spicok { Name = "Фигурка Zuru Pets ", Price = 2345, Foto = "/Photo/питомцы.jpg" },
+                    new Spicok { Name = "Игрушка развивающая alilo Умный зайка", Price = 3798, Foto = "/Photo/зайка.jpg" },
+                    new Spicok { Name = "Фигурка BalaToys Магма", Price = 1212, Foto = "/Photo/фигурка.jpg" },
+                    new Spicok { Name = "Кукла мини L.O.L. Surprise", Price = 2999, Foto = "/Photo/лол.jpg" },
+                    new Spicok { Name = "Кукла модельная Monster High", Price = 4999, Foto = "/Photo/монстр.jpg" },
+                    new Spicok { Name = "Конструктор LEGO Star Wars Сокол", Price = 82999, Foto = "/Photo/сокол лега.jpg" },
+                    new Spicok { Name = "Каталка Kreiss Mercedes Benz", Price = 1195, Foto = "/Photo/каталка.jpg" },
+                    new Spicok { Name = "Конструктор LEGO Minecraft Домик", Price = 585, Foto = "/Photo/лего свиньи.jpg" },
+                    new Spicok { Name = "Конструктор LEGO Minecraft The Sword", Price = 5599, Foto = "/Photo/сворд лего.jpg" },
+                    new Spicok { Name = "Настольная игра Bondibon ", Price = 500, Foto = "/Photo/настолка.jpg" },
+                    new Spicok { Name = "Настольная игра Bondibon ПЕРВОКЛАССНЫЙ ШОФЁР", Price = 149, Foto = "/Photo/настолка шофер.jpg" },
+                    new Spicok { Name = "Настольная игра Bondibon Времена года", Price = 149, Foto = "/Photo/времена года.jpg" },
+                    new Spicok { Name = "Настольная игра Hasbro Games Монополия", Price = 1500, Foto = "/Photo/монополия.jpg" },
+                    new Spicok { Name = "Игра настольная The Purple Cow магнитная Гонки", Price = 300, Foto = "/Photo/настолка гонка.jpg" },
+                    new Spicok { Name = "Пистолет водный Yiwu Yofun Trading Co", Price = 1999, Foto = "/Photo/водный пистолет.jpg" }
                 };
             }
         }

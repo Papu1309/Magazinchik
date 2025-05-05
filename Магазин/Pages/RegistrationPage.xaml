@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Магазин.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Title="RegistrationPage" Background="Chocolate" >
+      Title="RegistrationPage" Background="Plum" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

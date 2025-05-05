@@ -24,17 +24,25 @@ namespace Магазин.Pages
     /// </summary>
     public partial class AuthorizationPage : Page
     {
-        //public static List<Reg> users { get; set; }
-        
+        public static List<Reg> users { get; set; }
+
         public AuthorizationPage()
         {
             InitializeComponent();
-            //users = Connection1.entities.Reg.ToList();
+            users = Connection1.entities.Reg.ToList();
         }
 
         private void btnVxod_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Vid());
+
+            if (loginTb != null && ParolTb != null)
+            {
+                var NewUser = users.Where(users => users.Email == loginTb.Text && users.Password == ParolTb.Text).FirstOrDefault();
+                if (NewUser != null)
+                {
+                    NavigationService.Navigate(new Vid());
+                }
+            }
 
         }
 

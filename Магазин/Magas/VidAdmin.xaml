@@ -7,11 +7,11 @@
       mc:Ignorable="d" 
       d:DesignHeight="585" d:DesignWidth="890"
       Title="VidAdmin">
-    <Grid Margin="10">
+    <Grid Margin="10" >
        
-            <StackPanel>
+            <StackPanel >
             <!-- DataGrid для отображения и редактирования товаров -->
-            <DataGrid x:Name="productsGrid"
+            <DataGrid x:Name="productsGrid"  FontStyle="Italic" FontSize="23" FontWeight="Bold" 
                       ItemsSource="{Binding Spicoks}"
                       SelectedItem="{Binding SelectedSpicok}"
                       AutoGenerateColumns="False"
@@ -21,8 +21,8 @@
                 <DataGrid.Columns>
                     <!-- Колонка с названием товара -->
                     <DataGridTextColumn Header="Название"
-                                        Binding="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
-                                        Width="*"/>
+                                        Binding="{Binding Name, UpdateSourceTrigger=PropertyChanged}" 
+                                        Width="600"/>
 
                     <!-- Колонка с ценой -->
                     <DataGridTextColumn Header="Цена"
@@ -30,7 +30,7 @@
                                         Width="100"/>
 
                     <!-- Колонка с изображением -->
-                    <DataGridTemplateColumn Header="Изображение" Width="300" >
+                    <DataGridTemplateColumn Header="Изображение" Width="600" >
                         <DataGridTemplateColumn.CellTemplate >
                             <DataTemplate >
                                 <Image Source="{Binding Foto}" 
@@ -71,9 +71,9 @@
             </DataGrid>
 
             <!-- Кнопка добавления нового товара -->
-            <Button Content="Добавить товар"
+            <Button Content="Добавить товар" Height="40" 
                     Click="AddButton_Click"
-                    Width="120"
+                    Width="200" Background="Green" FontStyle="Italic" FontSize="20"
                     HorizontalAlignment="Left"/>
         </StackPanel>
         

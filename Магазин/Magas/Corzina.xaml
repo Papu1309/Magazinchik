@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Магазин.Magas"
         mc:Ignorable="d"
-        Title="Corzina" Height="450" Width="800" Background="Chocolate" >
+        Title="Corzina" Height="450" Width="800" Background="Plum" >
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
