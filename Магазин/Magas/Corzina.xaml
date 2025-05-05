@@ -1,0 +1,75 @@
+﻿<Window x:Class="Магазин.Magas.Corzina"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Магазин.Magas"
+        mc:Ignorable="d"
+        Title="Corzina" Height="450" Width="800" Background="Chocolate" >
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Список товаров -->
+        <ListView ItemsSource="{Binding SelectedProducts}"
+                  Grid.Row="0"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="#FFBDBDBD"
+                            BorderThickness="1"
+                            Margin="5"
+                            Padding="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Изображение товара -->
+                            <Image Source="{Binding Foto}"
+                                   Grid.Column="0"
+                                   Height="80"
+                                   Stretch="UniformToFill"/>
+
+                            <!-- Название -->
+                            <TextBlock Text="{Binding Name}"
+                                       Grid.Column="1"
+                                       Margin="10,0"
+                                       FontSize="14"/>
+
+                            <!-- Цена -->
+                            <TextBlock Text="{Binding Price}"
+                                       Grid.Column="2"
+                                       HorizontalAlignment="Right"
+                                       FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Общая сумма -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10">
+            <TextBlock Text="Общая сумма: "
+                       FontSize="16"/>
+            <TextBlock Text="{Binding TotalPrice}"
+                       FontSize="16"
+                       FontWeight="Bold"/>
+        </StackPanel>
+
+        <!-- Кнопки управления -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Оплатить"
+                    Click="ProceedToPayment_Click"
+                    Margin="5"
+                    Width="120"
+                    Background="#FF4CAF50"
+                    Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Window>

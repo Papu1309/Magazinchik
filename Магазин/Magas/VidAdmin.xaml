@@ -1,0 +1,81 @@
+﻿<Page x:Class="Магазин.Magas.VidAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Магазин.Magas"
+      mc:Ignorable="d" 
+      d:DesignHeight="585" d:DesignWidth="890"
+      Title="VidAdmin">
+    <Grid Margin="10">
+       
+            <StackPanel>
+            <!-- DataGrid для отображения и редактирования товаров -->
+            <DataGrid x:Name="productsGrid"
+                      ItemsSource="{Binding Spicoks}"
+                      SelectedItem="{Binding SelectedSpicok}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      Margin="0,0,0,10" 
+                      Height="700">
+                <DataGrid.Columns>
+                    <!-- Колонка с названием товара -->
+                    <DataGridTextColumn Header="Название"
+                                        Binding="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                                        Width="*"/>
+
+                    <!-- Колонка с ценой -->
+                    <DataGridTextColumn Header="Цена"
+                                        Binding="{Binding Price, UpdateSourceTrigger=PropertyChanged}"
+                                        Width="100"/>
+
+                    <!-- Колонка с изображением -->
+                    <DataGridTemplateColumn Header="Изображение" Width="300" >
+                        <DataGridTemplateColumn.CellTemplate >
+                            <DataTemplate >
+                                <Image Source="{Binding Foto}" 
+                                       Height="500"
+                                       Stretch="UniformToFill"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <!-- Колонка с действиями -->
+                    <DataGridTemplateColumn Header="Действия" Width="150">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <!-- Кнопка редактирования -->
+                                    <Button Content="✎"
+                                            ToolTip="Редактировать"
+                                            Click="EditButton_Click"
+                                            Margin="2"/>
+
+                                    <!-- Кнопка удаления -->
+                                    <Button Content="🗑"
+                                            ToolTip="Удалить"
+                                            Click="DeleteButton_Click"
+                                            Margin="2"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+
+                <!-- Обработчик двойного клика для редактирования -->
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"/>
+                    </Style>
+                </DataGrid.RowStyle>
+            </DataGrid>
+
+            <!-- Кнопка добавления нового товара -->
+            <Button Content="Добавить товар"
+                    Click="AddButton_Click"
+                    Width="120"
+                    HorizontalAlignment="Left"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>
